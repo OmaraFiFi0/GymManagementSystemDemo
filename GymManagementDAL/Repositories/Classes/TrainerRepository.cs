@@ -35,7 +35,7 @@ namespace GymManagementDAL.Repositories.Classes
         {
             return _dbContext.Trainers.Find(id);
         }
-
+            
         public int Update(Trainer trainer)
         {
             _dbContext.Trainers.Update(trainer);
