@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+ 
 namespace GymManagementBLL.ViewModels.MemberViewModels
 {
     internal class CreateMemberViewModel
