@@ -11,20 +11,13 @@ namespace GymManagementDAL.Repositories.Classes
 {
     internal class PlanRepository : IPlanRepository
     {
-        private readonly GymDbContext _dbContext = new GymDbContext();
-        public int Add(Plan plan)
+        //private readonly GymDbContext _dbContext = new GymDbContext();
+        private readonly GymDbContext _dbContext;
+        public PlanRepository(GymDbContext dbContext)
         {
-            _dbContext.Plans.Add(plan);
-            return _dbContext.SaveChanges();
+            _dbContext = dbContext;
         }
-
-        public int Delete(int id)
-        {
-            var plan = _dbContext.Plans.Find(id);
-            if (plan is null) return 0;
-            _dbContext.Plans.Remove(plan);
-            return _dbContext.SaveChanges();
-        }
+        
 
         public IEnumerable<Plan> GetAll()
         {

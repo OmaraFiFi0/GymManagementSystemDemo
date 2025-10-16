@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GymManagementDAL.Entities
 {
     // One-To-One With Member [Shared PK] 
-    internal class HealthRecord:BaseEntity
+    public class HealthRecord:BaseEntity
     {
         public decimal Height { get; set; }
         public decimal Weight { get; set; }
