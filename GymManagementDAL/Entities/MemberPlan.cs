@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GymManagementDAL.Entities
 {
-    internal class MemberPlan:BaseEntity
+    public class MemberPlan:BaseEntity
     {
         // IF Member Will Pay And Will Start After Week For Example
         // Will Create Two Attrubute In Operations
@@ -18,9 +18,9 @@ namespace GymManagementDAL.Entities
             get
             {
                 if (EndDate >= DateTime.Now)
-                    return "Expired";
-                else
                     return "Active";
+                else
+                    return "Expired";
             }
         }
 

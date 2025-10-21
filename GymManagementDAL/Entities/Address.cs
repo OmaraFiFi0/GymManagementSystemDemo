@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace GymManagementDAL.Entities
 {
     [Owned]
-    internal class Address
+    public class Address
     {
         public int BulidingNumber { get; set; }
         public string Street { get; set; } = null!;
